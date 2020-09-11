@@ -19,3 +19,10 @@ Register | `/api/register` | The payload should at least contain the user's emai
 
 ### Contact
 If you have any questions regarding the test, please email tech_assessment@zinoxmedia.com
+
+### Progress report
+The restful api has been created with each specified route having the correct payload.
+
+
+### Info
+Kindly retract if there be any issues
