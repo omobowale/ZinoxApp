@@ -1,28 +1,27 @@
-# ZINOX Mid-Level PHP Developer Test
+### Setup
 
-## Introduction
-We would like you to create a REST api using the laravel framework. This api
-should use JWT tokens to authenticate a user.
+### To make this application work on your system/environment,
 
-## Routes
-We would like you to create two routes;
+A. Duplicate the .env.example and rename as .env
 
-Name | Url | Description
---- | --- | ---
-Login | `/api/login` | The payload should be an email and password.
-Register | `/api/register` | The payload should at least contain the user's email and password.
+1. Generate an application key
+2. Generate a JWT_SECRET
 
-### Bonus Points
-- Create the docker setup.
-- Create Unit Tests.
-- Use git properly with concise messages.
+B. For testing (phpunit testing)
 
-### Contact
-If you have any questions regarding the test, please email tech_assessment@zinoxmedia.com
+1. Set API_USER_NAME
+2. Set API_USER_EMAIL
+3. Set API_USER_PASSWORD
 
-### Progress report
-The restful api has been created with each specified route having the correct payload.
+### Real Testing:
 
+As a way of testing, I created a login page and a register page, just to show that the token based authentication is working.
+Login page is at "/"
+Register page is at "/create"
 
-### Info
-Kindly retract if there be any issues
+### Unit Testing
+
+1. I created a JWTLoginRegisterTest.php file to assert some tests
+2. Also, I created some unit testing that checks that the login and register routes are working as intended. For the unit testing to work,
+   i. I created a config/api.php file to contain details of a default user.
+   ii. I chose random user for the login test using in-memory database

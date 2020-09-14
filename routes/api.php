@@ -21,6 +21,5 @@ Route::group(
     function ($router) {
         Route::post('login', 'AuthenticationController@login');
         Route::post('register', 'AuthenticationController@register');
-        Route::get('create', 'AuthenticationController@create');
     }
 );

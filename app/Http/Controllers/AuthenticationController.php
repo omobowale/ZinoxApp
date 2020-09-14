@@ -17,7 +17,7 @@ class AuthenticationController extends Controller
     public function __construct()
     {
         $this->middleware('auth:api', [
-            'except' => ['login', 'register', 'create'],
+            'except' => ['login', 'register'],
         ]);
     }
 
@@ -131,10 +131,5 @@ class AuthenticationController extends Controller
                     ->getTTL() * 60,
             'user' => auth()->user(),
         ]);
-    }
-
-    public function create()
-    {
-        return view('register');
     }
 }
